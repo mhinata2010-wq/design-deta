@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Field Schedule Reference</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark">B</span><div><b>BUILDING</b><small>FIELD SCHEDULE</small></div></div>
+    <div class="project"><span>PROJECT</span><strong>神山改修工事</strong></div>
+    <div class="top-actions"><button>共有</button><button class="primary">＋ 作業を追加</button><div class="avatar">HM</div></div>
+  </header>
+
+  <nav class="tabs" aria-label="主要ビュー">
+    <button class="active">工程表</button><button>今日</button><button>Lookahead</button><button>課題</button><button>写真・日報</button>
+  </nav>
+
+  <main>
+    <section class="commandbar">
+      <div><p class="eyebrow">MASTER SCHEDULE</p><h1>工程を、紙のように動かす。</h1><p>バーを直接ドラッグして検討し、そのまま現場へ共有する。</p></div>
+      <div class="view-actions"><button>−</button><span>週</span><button>＋</button><button>今日へ</button></div>
+    </section>
+
+    <section class="status-grid">
+      <article><span>予定進捗</span><strong>68%</strong><small>今週 +12pt</small></article>
+      <article><span>実績進捗</span><strong>61%</strong><small class="warn">DELTA −7pt</small></article>
+      <article><span>要対応</span><strong>3</strong><small>遅延 2 / 未確定 1</small></article>
+      <article><span>次の7日</span><strong>12</strong><small>作業予定</small></article>
+    </section>
+
+    <section class="schedule-shell">
+      <aside class="task-list">
+        <div class="task-head"><span>作業</span><button>＋</button></div>
+        <div class="group">基礎工事 <span>4</span></div>
+        <div class="task">掘削・床付け <small>完了</small></div>
+        <div class="task">配筋 <small>田中班</small></div>
+        <div class="task">型枠 <small>山本班</small></div>
+        <div class="group">躯体工事 <span>3</span></div>
+        <div class="task">1F 建方 <small>11/06</small></div>
+        <div class="task">2F 建方 <small>11/10</small></div>
+      </aside>
+
+      <div class="timeline" id="timeline">
+        <div class="days"><b>11/1 日</b><b>11/2 月</b><b>11/3 火</b><b>11/4 水</b><b>11/5 木</b><b>11/6 金</b><b>11/7 土</b></div>
+        <div class="today-line"><span>今日</span></div>
+        <div class="row"><div class="bar done" style="--x:2%;--w:22%">掘削・床付け</div></div>
+        <div class="row"><div class="bar" style="--x:18%;--w:28%">配筋 <i>70%</i></div></div>
+        <div class="row"><div class="bar warn" style="--x:39%;--w:25%">型枠 <i>遅延</i></div></div>
+        <div class="row spacer"></div>
+        <div class="row"><div class="bar future" style="--x:58%;--w:24%">1F 建方</div></div>
+        <div class="row"><div class="bar future" style="--x:74%;--w:23%">2F 建方</div></div>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel"><div class="panel-head"><b>ATTENTION</b><span>3件</span></div><p><strong>型枠が1日遅延</strong><br><small>後続の1F建方に影響する可能性</small></p><button>工程上で確認 →</button></article>
+      <article class="panel"><div class="panel-head"><b>LOOKAHEAD / 7 DAYS</b><span>12作業</span></div><p><strong>11/6 1F 建方</strong><br><small>必要人数 6名 ・ 資材確認済み</small></p><button>7日計画を開く →</button></article>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
