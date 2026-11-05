@@ -1,0 +1,30 @@
+name: KANNA-inspired marketing template / validation
+
+on:
+  push:
+    paths:
+      - "kanna-inspired-marketing-template/**"
+      - ".github/workflows/kanna-marketing-template.yml"
+  pull_request:
+    paths:
+      - "kanna-inspired-marketing-template/**"
+      - ".github/workflows/kanna-marketing-template.yml"
+
+jobs:
+  static-validation:
+    name: Static UI and design contract checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check JavaScript syntax
+        run: |
+          node --check kanna-inspired-marketing-template/app.js
+          node --check kanna-inspired-marketing-template/test.mjs
+      - name: Run zero-dependency UI contract tests
+        run: node --test kanna-inspired-marketing-template/test.mjs
