@@ -27,7 +27,7 @@
 | 利用メリット | Before的なPain cards・UX原則4枚 | 何を解決するかの因果を示す |
 | 製品説明と導入手順 | 3段階のワークフロー | オンボーディングの心理的負荷を減らす |
 | 導入事例や用途 | 実績を偽らない3人の**想定ユーザーシナリオ** | 役割別利用を説明 |
-| FAQ・利用開始CTA | ネイティブ\`details\` FAQとページ内CTA | デモとして実際に機能する |
+| 更新情報・セミナー等の案内 | **オリジナルのUI研究ノート**3枚で、記事カードの構造だけ再現 | 発表日やニュースを捏造しない |\n| FAQ・利用開始CTA | ネイティブ\`details\` FAQとページ内CTA | デモとして実際に機能する |
 | 会社情報・フッター | オリジナルのフッターと出典 | 独立したテンプレートであることを明確にする |
 
 ## 画面と動作
@@ -63,7 +63,7 @@
 
 \`\`\`text
 kanna-inspired-marketing-template/
-├── index.html            # 10の主要LPセクション・ヒーローモックUI
+├── index.html            # 11の主要LPセクション・ヒーローモックUI
 ├── styles.css            # Design Tokens / Responsive / Animation
 ├── app.js                # 機能タブ切替 / Mobile Nav / Reveal / Scrollspy
 ├── tokens.json           # 意味別のトークン・ブレークポイント情報
