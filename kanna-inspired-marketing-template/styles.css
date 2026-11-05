@@ -226,6 +226,27 @@ img,svg{max-width:100%}
 .scenario-body>span{color:var(--green-800);font-size:10px;letter-spacing:.12em;font-weight:850}
 .scenario-body h3{font-size:21px;margin:9px 0}
 .scenario-body p{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.95}
+/* Editorial / resources: reusable announcement, seminar and article cards */
+.resource-section{background:#fff}
+.resource-top{display:flex;align-items:flex-end;justify-content:space-between;gap:35px}
+.resource-top .section-heading{margin-bottom:36px}
+.resource-top>.text-link{margin-bottom:42px;white-space:nowrap}
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.resource-card{border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;transition:transform var(--base),border-color var(--base)}
+.resource-card:hover{transform:translateY(-3px);border-color:#92bba8}
+.resource-visual{height:169px;position:relative;padding:22px;overflow:hidden}
+.resource-visual span{font-size:10px;letter-spacing:.14em;font-weight:900}
+.resource-visual b{position:absolute;bottom:-38px;right:12px;font-size:140px;line-height:1;font-weight:900;opacity:.16;letter-spacing:-.09em}
+.resource-a{background:#e0f0e5;color:#1d6850}
+.resource-b{background:#e9f0ef;color:#316d73}
+.resource-c{background:#f4e9da;color:#a46840}
+.resource-body{padding:23px 24px 22px;display:flex;flex:1;flex-direction:column}
+.resource-type{font-size:10px;font-weight:900;letter-spacing:.12em;color:var(--green-800)}
+.resource-body h3{font-size:18px;margin:13px 0 8px;line-height:1.6}
+.resource-body p{font-size:12px;color:var(--ink-soft);margin:0 0 18px}
+.resource-body a{display:flex;align-items:center;justify-content:space-between;margin-top:auto;border-top:1px solid var(--line);padding-top:13px;font-size:12px;font-weight:850;color:var(--green-900)}
+@media(max-width:950px){.resource-grid{grid-template-columns:repeat(2,1fr)}.resource-card:last-child{grid-column:1/-1}}
+@media(max-width:720px){.resource-grid{grid-template-columns:1fr}.resource-card:last-child{grid-column:auto}.resource-top{display:block}.resource-top>.text-link{display:none}.resource-visual{height:132px}}
 /* FAQ */
 .faq-section{background:var(--bg)}
 .faq-grid{display:grid;grid-template-columns:35% 65%;gap:45px}
